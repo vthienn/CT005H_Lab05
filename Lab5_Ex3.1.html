@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 - Digital Learning Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* 1. THIẾT LẬP CƠ BẢN */
+        :root {
+            --primary-color: #00f2ff; /* Màu xanh Neon */
+            --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Nền tối Galaxy */
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. HIỆU ỨNG TIÊU ĐỀ */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(#00f2ff, #00c3ff);
+    
+    /* Thêm dòng này vào để fix cảnh báo: */
+    background-clip: text; 
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+        p.subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        /* 3. CONTAINER CHÍNH (Glassmorphism) */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        /* 4. CÁC PHẦN TỬ SẢN PHẨM */
+        .section-title {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            font-size: 1.5rem;
+            margin: 30px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Nút tải về Neon */
+        .btn-download {
+            display: inline-block;
+            padding: 15px 30px;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .btn-download:hover {
+            background: var(--primary-color);
+            color: #000;
+            box-shadow: 0 0 30px var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Ảnh Infographic */
+        .img-showcase {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease;
+        }
+
+        .img-showcase:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+        }
+
+        /* Video Frame */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Tỉ lệ 16:9 */
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 5. FOOTER */
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            width: 100%;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DIGITAL PORTFOLIO</h1>
+        <p class="subtitle">Báo cáo Bài thực hành 05 - Kỹ thuật phần mềm</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">01. Báo cáo Nhóm</h2>
+            <p>Tài liệu hợp tác trực tuyến về chủ đề "Ứng dụng công nghệ số trong học tập".</p>
+            <a href="Lab05_Ex1.2.pdf" class="btn-download" target="_blank">
+                <i class="fas fa-download"></i> Tải về Báo cáo PDF
+            </a>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.1); margin: 30px 0;">
+
+        <div class="section">
+            <h2 class="section-title">02. Infographic Thiết kế</h2>
+            <p>Sản phẩm thiết kế đồ họa thông tin sử dụng Canva AI.</p>
+            <img src="Lab05_Ex2.1.png" alt="Infographic Lab 05" class="img-showcase">
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.1); margin: 30px 0;">
+
+        <div class="section">
+            <h2 class="section-title">03. Video Viral</h2>
+            <p>Sản phẩm video ngắn "Digital Learning: Unlock Your Potential".</p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/ooWi7hJlU9Y" 
+                    title="Lab 05 Video" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Designed by <strong>Thiện</strong> - MSSV: <strong>B2505072</strong></p>
+        <p>Lab 05 - CT005H Assignment</p>
+    </footer>
+
+</body>
+</html>
