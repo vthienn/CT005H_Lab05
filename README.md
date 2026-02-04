@@ -1,4 +1,4 @@
-#### CT005H – Lab05 – Phạm Văn Thiên – B2505072 – CT005H
+#### CT005H – Lab05 – Phạm Văn Thiên – B2505072 – M05
 
 ## Giới thiệu
 Đây là kho lưu trữ sản phẩm thực hành Lab 05 môn Tin học văn phòng / Kỹ thuật phần mềm.
