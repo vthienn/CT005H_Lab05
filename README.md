@@ -14,4 +14,4 @@ Kho lưu trữ này chứa các nội dung số được tạo ra nhằm đáp �
 ## Thông tin sinh viên
 * **Họ và tên:** Phạm Văn Thiên
 * **MSSV:** B2505072
-* **Lớp học phần:** CT005H
+* **Lớp học phần:** M05
